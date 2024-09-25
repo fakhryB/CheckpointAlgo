@@ -1,0 +1,54 @@
+function isLeapYear(year) {
+    if (year % 400 === 0) {
+        return true;
+    } else if (year % 100 === 0) {
+        return false;
+    } else if (year % 4 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function Pal(s,d,f){
+    if(d == f){
+      return true
+    }
+  
+    if(s[d] != s[f]){
+      return false
+    }
+  
+    if(d<f){
+      return Pal(s,d+1,f-1)
+    }
+  
+    return true
+  }
+
+function puissance(x, y) {
+
+    if (y == 0) {
+      return 1
+    }
+  
+    return x * puissance(x, y - 1)
+  
+  
+  }
+
+function getTicketPrice(age) {
+    let price;
+
+    if (age <= 12) {
+        price = 10;
+    } else if (age >= 13 && age <= 17) {
+        price = 15;
+    } else if (age >= 18) {
+        price = 20;
+    } else {
+        price = "Invalid age";
+    }
+
+    return price;
+}
